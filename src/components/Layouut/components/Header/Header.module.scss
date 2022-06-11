@@ -14,6 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 var(--default-layout-horizontal-spacer);
 }
 
 .logo {
@@ -99,10 +100,32 @@
     color: red;
 }
 
+// Action
+.action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .more-btn {
     font-size: 2rem;
     margin-left: 28px;
     padding: 8px;
     background-color: transparent;
+    cursor: pointer;
+}
+.action-btn {
+    font-size: 2rem;
+    margin: 20px 20px;
+    color: #161823;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
     cursor: pointer;
 }
