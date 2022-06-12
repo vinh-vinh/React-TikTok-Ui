@@ -28,6 +28,9 @@ import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
 import { faMessage } from '@fortawesome/free-regular-svg-icons';
 import 'tippy.js/dist/tippy.css';
+import { MessageIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
+
 const cx = classNames.bind(styles);
 
 const currentUser = true;
@@ -145,7 +148,8 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload Video" placeholder="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -158,10 +162,11 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEM} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
                                 src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/bdf3385ef65b310a495faab09496e344~c5_100x100.jpeg?x-expires=1655028000&x-signature=BSXzhta%2BBJlSP3wflgvRgxss6AA%3D"
+                                fallback="https://static.fullstack.edu.vn/static/media/f8-icon.7ad2b161d5e80c87e516.png"
                             />
                         ) : (
                             <button className={cx('more-btn')}>

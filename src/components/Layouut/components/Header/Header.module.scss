@@ -62,7 +62,7 @@
 
     // Này là focus nhấn vào input thì nó có viền ngoài cùng màu
     &:focus-within {
-        border-color: rgba(234, 83, 28, 0.2);
+        border-color: rgba(234, 83, 28, 0.2); 
     }
 }
 .search-title {
