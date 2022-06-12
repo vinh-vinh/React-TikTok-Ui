@@ -62,7 +62,7 @@
 
     // Này là focus nhấn vào input thì nó có viền ngoài cùng màu
     &:focus-within {
-        border-color: rgba(234, 83, 28, 0.2); 
+        border-color: rgba(234, 83, 28, 0.2);
     }
 }
 .search-title {
@@ -115,11 +115,27 @@
     cursor: pointer;
 }
 .action-btn {
+    position: relative;
+    display: flex;
     font-size: 2rem;
-    margin: 20px 20px;
+    margin: 4px 10px;
     color: #161823;
     background-color: transparent;
     cursor: pointer;
+}
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -4px;
+    padding: 0px 6px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    font-family: var(--font-family);
+    background-color: var(--primary);
 }
 
 .user-avatar {
