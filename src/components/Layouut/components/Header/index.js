@@ -70,7 +70,7 @@ function Header() {
 
     useEffect(() => {
         setTimeout(() => {
-            setsearResult([]);
+            setsearResult([1, 2, 3, 4]);
         }, 0);
     }, []);
 
@@ -114,7 +114,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <img src={images.logo} alt="Tiktok" />
-                <Tippy
+                <HeadlessTippy
                     interactive
                     visible={searResult.length > 0}
                     render={(attrs) => (
@@ -141,7 +141,7 @@ function Header() {
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>
                     </div>
-                </Tippy>
+                </HeadlessTippy>
 
                 <div className={cx('action')}>
                     {currentUser ? (
