@@ -1,3 +1,5 @@
+import routesConfig from '~/config/routes';
+
 // Layout
 import { HeaderOnly } from '~/components/Layouut/';
 
@@ -10,11 +12,11 @@ import Search from '~/pages/Search';
 
 // Public routes không đăng nhập vẫn xem được
 const publicRoutes = [
-    { path: '/', component: Home },
-    { path: '/following', component: Following },
-    { path: '/@:nickname', component: Profile },
-    { path: '/upload', component: Upload, layout: HeaderOnly },
-    { path: '/search', component: Search, layout: null },
+    { path: routesConfig.home, component: Home },
+    { path: routesConfig.following, component: Following },
+    { path: routesConfig.profile, component: Profile },
+    { path: routesConfig.upload, component: Upload, layout: HeaderOnly },
+    { path: routesConfig.search, component: Search, layout: null },
 ];
 
 // Private routes đăng nhập mới xem được
